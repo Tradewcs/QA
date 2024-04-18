@@ -1,0 +1,32 @@
+// http://speak-ukrainian.eastus2.cloudapp.azure.com/dev/api/user/105
+
+[{
+    "firstName":"",
+    "lastName":"Paranchych",
+    "phone":"+380951280017",
+    "message": "can`t be empty"
+},
+{
+    "firstName":"__",
+    "lastName":"Ok-lol",
+    "phone":"+380951450019",
+    "message": "can contain only ukrainian and english letters"
+},
+{
+    "firstName":"Ann",
+    "lastName":"OklolOklolOklolOklolOklolOklolOklolOklolOklolOklolOklol",
+    "phone":"+380951450019",
+    "message": "can contain from 1 to 25 letters"
+},
+{
+    "firstName":"Ann",
+    "lastName":"",
+    "phone":"+380951450019",
+    "message": "can`t be empty"
+},
+{
+    "firstName":"Ann",
+    "lastName":"__",
+    "phone":"+380951450019",
+    "message": "can contain only ukrainian and english letters"
+}]
