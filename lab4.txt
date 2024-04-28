@@ -1,0 +1,20 @@
+Test case ID:
+TC_Submission_01
+
+Test case description:
+To test if an appropriate error message is displayed when I try to submit assignment which is overdue
+
+Positive/negative:
+Negative
+
+Precondition:
+User is signed in to the Moodle learning management system
+
+Test steps:
+Open task page
+
+Test data:
+none
+
+Expected result:
+An error message is displayed "Assignment is overdue by: *time for which the task is overdue*"
