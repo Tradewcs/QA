@@ -1,0 +1,6 @@
+1. Не відображається меню в англомовній версії сайту
+
+Browser: Firefox
+OS: MacOS
+
+https://fmi.chnu.edu.ua/en/
