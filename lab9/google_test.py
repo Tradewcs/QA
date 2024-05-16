@@ -7,6 +7,7 @@ from selenium.webdriver.common.by import By
  
  
 GOOGLE_HOME = 'https://google.com/'
+LINK_CLASS = 'LC20lb'
  
 scenarios('google_scenario.feature')
  
@@ -30,10 +31,19 @@ def search_phrase(browser, phrase):
     search_input.send_keys(phrase + Keys.RETURN)
  
  
-@then(parsers.parse('results are shown for "{phrase}"'))
-def search_results(browser, phrase):
-    assert len(browser.find_elements(By.XPATH, '//h2')) > 0
+@then(parsers.parse('results are shown for "{phrase1}" or "{phrase2}"'))
+def search_results(browser, phrase1, phrase2):
+    links = browser.find_elements(By.CSS_SELECTOR, 'a > .LC20lb')
+    
+    count = 0
+    for l in links:
+        if phrase1 in l.text.lower() or phrase2 in l.text.lower():
+            count += 1
+    
+    assert count / len(links) > 0.8, "Count found links less than 80%"
+    # assert len(h2s) > 0
     
     search_input = browser.find_element(By.ID, 'APjFqb')
-    assert search_input.text == phrase
+    assert search_input.text == phrase1
 
+    
